@@ -110,7 +110,7 @@ for original_sentence in sentences:
         time.sleep(5)  # pausa leve para segurança
     
     current_id += 1
-    if current_id == 500:
+    if current_id == 452:
         break
 
 # === SALVA EM XLSX ===
