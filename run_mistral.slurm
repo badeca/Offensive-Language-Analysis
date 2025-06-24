@@ -10,8 +10,7 @@
 
 # === Preparação ===
 module load Python3.10
-python -m venv mistral_tcc
-source $HOME/mistral_tcc/bin/activate
+source $HOME/Offensive-Language-Analysis/mistral_tcc/bin/activate
 
 # === Diagnóstico do ambiente ===
 echo "Python path:"
