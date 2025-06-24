@@ -31,6 +31,7 @@ pip install auto-gptq
 # (opcional, se precisar de compatibilidade com outras libs de quantização)
 pip install bitsandbytes
 pip install protobuf
+pip install openpyxl
 
 # === Verificação final ===
 echo "Pacotes instalados:"
