@@ -8,8 +8,15 @@
 #SBATCH --mail-type=FAIL,END
 #SBATCH --mail-user=gchf@cin.ufpe.br
 
-# Ativa o ambiente virtual
+# === Preparação ===
+module load Python3.10
+python -m venv mistral_tcc
 source $HOME/mistral_tcc/bin/activate
+
+# === Diagnóstico do ambiente ===
+echo "Python path:"
+which python
+python --version
 
 # Executa seu script Python
 python run_mistral.py
