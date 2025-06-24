@@ -13,7 +13,7 @@ model = AutoGPTQForCausalLM.from_quantized(
     use_safetensors=True,
     device_map="auto",
     trust_remote_code=True,
-    max_memory="auto",
+    max_memory={"0": "16GiB", "cpu": "12GiB"},
     disable_exllama=True
 )
 
