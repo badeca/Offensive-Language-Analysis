@@ -19,4 +19,4 @@ which python
 python --version
 
 # Executa seu script Python
-pip install protobuf
+python -u run_mistral.py
