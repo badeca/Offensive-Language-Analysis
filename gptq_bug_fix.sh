@@ -1,10 +1,10 @@
 #!/bin/bash
-#SBATCH --job-name=run_mistral
+#SBATCH --job-name=gptq_install
 #SBATCH --mem=16G
 #SBATCH -c 8
 #SBATCH -p short
 #SBATCH --gpus=1
-#SBATCH -o run_mistral.log
+#SBATCH -o gptq_install.log
 #SBATCH --mail-type=FAIL,END
 #SBATCH --mail-user=gchf@cin.ufpe.br
 
@@ -13,7 +13,4 @@ module load Python3.10
 source $HOME/Offensive-Language-Analysis/mistral_tcc/bin/activate
 
 # Executa seu script Python
-pip uninstall auto-gptq
-git clone https://github.com/PanQiWei/AutoGPTQ.git
-cd AutoGPTQ
-pip install .
+pip install auto-gptq
