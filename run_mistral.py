@@ -90,13 +90,13 @@ current_id = 0
 print(len(sentences))
 
 for original_sentence in sentences:
-    if current_id >= 450:
+    if current_id >= 600:
         print(f"\n--- Processando ID {current_id} ---")
 
         original_reason = classify(original_sentence)
         reform_sentence = reformulate(original_sentence)
         reform_reason = classify(reform_sentence)
-        class_comparison = comparison(original_sentence, reform_sentence)
+        class_comparison = "rephrased"
 
         building_dataset(
             current_id,
@@ -110,7 +110,7 @@ for original_sentence in sentences:
         time.sleep(5)  # pausa leve para segurança
     
     current_id += 1
-    if current_id == 451:
+    if current_id == 700:
         break
 
 # === SALVA EM XLSX ===
@@ -118,6 +118,6 @@ df = pd.DataFrame.from_dict(dataset_dict, orient='index')
 df.index.name = 'id'
 df = df.reset_index()
 
-output_file = '500_mistral_03_gptq.xlsx'
+output_file = '700_mistral_03_gptq.xlsx'
 df.to_excel(output_file, index=False, engine='openpyxl')
 print(f"\nArquivo salvo como {output_file}")
