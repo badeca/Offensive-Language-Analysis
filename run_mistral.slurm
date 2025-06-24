@@ -18,4 +18,4 @@ which python
 python --version
 
 # Executa seu script Python
-python -u run_mistral.py
+pip install openpyxl
