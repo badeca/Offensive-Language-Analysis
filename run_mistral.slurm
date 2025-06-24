@@ -19,4 +19,4 @@ which python
 python --version
 
 # Executa seu script Python
-python run_mistral.py
+python -u run_mistral.py
