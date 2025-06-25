@@ -14,9 +14,6 @@ genai.configure(api_key="AIzaSyA50_R3Vwy8wA9vQbIQoA2iPJojOjS_mVA") #my-first-pro
 # genai.configure(api_key="AIzaSyBaegap1wgv73fQDaAuovQHYoPkPmq2RPI") #gemini-api
 model = genai.GenerativeModel('gemini-2.0-flash')
 
-import google.generativeai as genai
-import google.generativeai.types as types
-
 def get_ai_response_for_bias_analysis(model, prompt_text):
     try:
         response = model.generate_content(prompt_text)
