@@ -8,8 +8,14 @@
 #SBATCH --mail-type=FAIL,END
 #SBATCH --mail-user=gchf@cin.ufpe.br
 
-# Ativa o ambiente virtual
-source $HOME/mistral_tcc/bin/activate
+# === Preparação ===
+module load Python3.10
+source $HOME/Offensive-Language-Analysis/mistral_tcc/bin/activate
+
+# === Diagnóstico do ambiente ===
+echo "Python path:"
+which python
+python --version
 
 # Executa seu script Python
-python run_mistral3.py
+python -u run_mistral3.py
