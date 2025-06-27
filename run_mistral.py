@@ -90,7 +90,7 @@ current_id = 0
 print(len(sentences))
 
 for original_sentence in sentences:
-    if current_id >= 700:
+    if current_id >= 9000:
         print(f"\n--- Processando ID {current_id} ---")
 
         original_reason = classify(original_sentence)
@@ -110,7 +110,7 @@ for original_sentence in sentences:
         time.sleep(5)  # pausa leve para segurança
     
     current_id += 1
-    if current_id == 3000:
+    if current_id == 11000:
         break
 
 # === SALVA EM XLSX ===
