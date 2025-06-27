@@ -90,7 +90,7 @@ current_id = 0
 print(len(sentences))
 
 for original_sentence in sentences:
-    if current_id >= 7000:
+    if current_id >= 15000:
         print(f"\n--- Processando ID {current_id} ---")
 
         original_reason = classify(original_sentence)
@@ -110,7 +110,7 @@ for original_sentence in sentences:
         time.sleep(5)  # pausa leve para segurança
     
     current_id += 1
-    if current_id == 9000:
+    if current_id == 17000:
         break
 
 # === SALVA EM XLSX ===
@@ -118,6 +118,6 @@ df = pd.DataFrame.from_dict(dataset_dict, orient='index')
 df.index.name = 'id'
 df = df.reset_index()
 
-output_file = '9000_mistral_03_gptq.xlsx'
+output_file = '17000_mistral_03_gptq.xlsx'
 df.to_excel(output_file, index=False, engine='openpyxl')
 print(f"\nArquivo salvo como {output_file}")
